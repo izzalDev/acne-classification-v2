@@ -1,0 +1,12 @@
+stages:
+  prepare:
+    cmd: python src/prepare.py
+    deps:
+    - src/prepare.py
+    params:
+    - prepare.seed
+    - prepare.shuffle
+    - prepare.split
+    - prepare.stratify
+    outs:
+    - data/processed
